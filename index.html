@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Flashcard Quiz - CodeAlpha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="confetti-container"></div>
+    <audio id="correct-sound" src="https://assets.mixkit.co/active_storage/sfx/2019/2019-84.wav" preload="auto"></audio>
+    <audio id="wrong-sound" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-84.wav" preload="auto"></audio>
+
+    <div class="container">
+        <div class="header">
+            <h1>🏆 Web Dev Beginner Quiz</h1>
+            <div class="category-badge" id="category-badge">HTML</div>
+        </div>
+
+        <div class="card-container">
+            <div class="flashcard" id="flashcard">
+                <div class="front" id="card-front">Loading Question...</div>
+                <div class="back" id="card-back">Loading Answer...</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prev-btn" class="nav-btn">← Prev</button>
+            <button id="flip-btn">🔍 Reveal Answer</button>
+            <button id="next-btn" class="nav-btn">Next →</button>
+        </div>
+
+        <p class="card-indicator">Question: <span id="current-card-num">1</span> / <span id="total-cards-num">12</span></p>
+
+        <hr>
+
+        <div class="quiz-section">
+            <h3>Type Your Answer:</h3>
+            <input type="text" id="user-answer" placeholder="Type here (e.g., h1, red, margin)...">
+            <button id="check-btn">🚀 Check Answer</button>
+            
+            <div id="feedback-msg" class="feedback"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
